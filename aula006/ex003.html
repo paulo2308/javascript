@@ -19,11 +19,12 @@
     <h1>Olá, mundo</h1> <!--Comentário em HTML-->
     <p>Bom dia</p>
     <script>
-        var n1 = parseInt(window.prompt("Digite um número")) //Comentario em js
-        var n2 = Number.parseInt(window.prompt("Digite outro número")) //parseInt(string) converte string para inteiro
-        var n3 = Number(window.prompt("Digite mais um número")) //Number converte string para numero inteiro ou decimal
+        var n1 = parseInt(window.prompt("Digite um número")) // Comentario em js
+        var n2 = Number.parseInt(window.prompt("Digite outro número")) // parseInt(string) converte string para inteiro
+        var n3 = Number(window.prompt("Digite mais um número")) // Number converte string para numero inteiro ou decimal
         var soma = n1 + n2 + n3
-        window.alert("A soma dos valores é " + soma)
+        window.alert(`${n1} + ${n2} + ${n3} = ${soma}`) /* Template string é a formatação de variaveis dentro de crases
+                                                          essa formatação não funciona utilizando aspas simples ou duplas   */
     </script>
 </body>
 </html>
