@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primeiro programa</title>
+    <title>Terceiro programa</title>
     <style>
         body{
             background-color: rgb(39, 39, 39);
@@ -19,8 +19,11 @@
     <h1>Olá, mundo</h1> <!--Comentário em HTML-->
     <p>Bom dia</p>
     <script>
-        var nome = window.prompt("qual seu nome?") //Comentario em js
-        window.alert("prazer, " + nome)
+        var n1 = parseInt(window.prompt("Digite um número")) //Comentario em js
+        var n2 = Number.parseInt(window.prompt("Digite outro número")) //parseInt(string) converte string para inteiro
+        var n3 = Number(window.prompt("Digite mais um número")) //Number converte string para numero inteiro ou decimal
+        var soma = n1 + n2 + n3
+        window.alert("A soma dos valores é " + soma)
     </script>
 </body>
 </html>
