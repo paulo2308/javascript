@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EstiloFlix</title> <!--Titulo impresso na aba-->
+    <style>
+        body {
+            font-family: 'Roboto Mono',monospace;
+            text-align:center;
+            background-image: url('https://img.freepik.com/fotos-gratis/fundo-abstrato-preto-escuro-com-lascas-de-madeira_24972-208.jpg?size=338&ext=jpg&ga=GA1.2.1135173464.1609286400');
+            background-color: #000000;
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+            }
+
+            .container {
+            text-align: center;
+            padding: 20px;
+            }
+
+            .page-title {
+            color: #ffffff;
+            margin: 0 0 5px;
+            }
+
+            .page-subtitle {
+            color: #ffffff;
+            margin-top: 5px;
+            }
+
+            .page-logo {
+            width: 200px;
+            }
+
+            .alura-logo {
+            width: 40px;
+            position: absolute;
+            top: 10px;
+            right:10px;
+            }
+
+            body > img {
+            margin: 0 10px;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">
+            Estiloflix   <!--Titulo impresso na página-->
+        </h1>
+    </div>
+    <script>
+        var filmes = [] //Vetor que armazena os endereços url das imagens dos filmes
+        
+        // O comando push inclui elementos dentro do vetor
+        //B13 - 13º Distrito
+        filmes.push("https://m.media-amazon.com/images/M/MV5BM2U4YmU4NWYtYzZkOC00MTY5LThjMzMtZDQ3ZTMzMTM0ODg2XkEyXkFqcGdeQXVyODIyOTEyMzY@._V1_UY268_CR5,0,182,268_AL_.jpg")
+
+        //Lutador de rua
+        filmes.push("https://m.media-amazon.com/images/M/MV5BNjE0MDc4ODY4Ml5BMl5BanBnXkFtZTcwNDI2NjM4Mg@@._V1_UX182_CR0,0,182,268_AL_.jpg")
+
+        //Clube da luta
+        filmes.push("https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg")
+
+        for(var i=0;i<filmes.length;i++){
+        document.write(`<img src= ${filmes[i]}</BR>`) //imprime as imagens na pagina, o comando </BR> é necessário para que as imagens não se sobreponham
+        //document.write("<img src=" + filmes[i] + ">")  //Funiona igual a linha de cima, porém não é necessário utilizar o </BR>, ainda não entendi o porque
+        }
+    </script>
+</body>
+</html>
