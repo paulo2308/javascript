@@ -16,5 +16,15 @@
 </head>
 <body>
     <h1>Iniciando estudos com o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em javascript</p>
+    <div id='msg'>Clique aqui</div>
+    <script>
+        var p1 = document.getElementsByTagName('p')[1] //seleção pelo nome da tag (p) e a posição no codigo [1]
+        p1.style.color = "white"  //altera a cor do segundo paragrafo p1
+
+        var d = document.querySelector('div#msg') //seleção por id usa #(hashtag) e por class usa .(ponto)
+        d.style.color = 'blue' //altera a cor da div
+    </script>
 </body>
 </html>
