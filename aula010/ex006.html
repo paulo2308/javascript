@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title> <!--nome que aparece na aba-->
+    <style>
+        div#area{
+            font: normal 20pt Arial; /*tipo e tamanho da fonte*/
+            background: rgb(55, 95, 14); /*cor do fundo*/
+            color: white; /*cor das palavras*/
+            width: 200px; /*largura ocupada pela div*/
+            height: 200px; /*altura ocupada pela div*/
+            line-height: 200px; /*Determina a distancia da borda superior*/
+            text-align: center; /*centraliza o texto*/
+        }
+    </style>
+</head>
+<body>
+    <div id='area' onclick="clicar()" onmouseenter='entrar()' onmouseout='sair()'>
+        Intereja... <!--Texto inicial da div apresentado na tela-->
+    </div>
+    <script>
+        function clicar(){ //função chamada quando é efetuado um click dentro da area (onclick)
+            var area = document.querySelector('div#area')
+            area.innerText = 'Clicou'  //texto mostrado após o click
+            area.style.background = 'black'  //cor do background após o click
+        }
+
+        function entrar(){ //função chamada quando o mouse entra na area da div (onmouseenter)
+            var area = document.getElementById('area') //selecionando a div pelo metodo getElementById('area')
+            area.innerText = 'Mouse na area' //texto mostrado após entrar na div com o mouse
+        }
+
+        function sair(){ //função chamada quando o mouse sai da area da div (onmouseout)
+            var area = document.querySelector('div#area') //selecionando a div pelo metodo querySelector('div#area')
+            area.innerHTML = 'Mouse partiu' //texto mostrado após sair da div com o mouse
+            area.style.background = 'rgb(55, 95, 14)' //cor do background após sair da div com o mouse
+        }
+    </script>
+</body>
+</html>
