@@ -18,23 +18,29 @@
     </style>
 </head>
 <body>
-    <div id='area' onclick="clicar()" onmouseenter='entrar()' onmouseout='sair()'>
+    <div id='area' >
         Intereja... <!--Texto inicial da div apresentado na tela-->
     </div>
     <script>
+         
+        var area = document.querySelector('div#area')
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
+
         function clicar(){ //função chamada quando é efetuado um click dentro da area (onclick)
-            var area = document.querySelector('div#area')
+            //var area = document.querySelector('div#area')
             area.innerText = 'Clicou'  //texto mostrado após o click
             area.style.background = 'black'  //cor do background após o click
         }
 
         function entrar(){ //função chamada quando o mouse entra na area da div (onmouseenter)
-            var area = document.getElementById('area') //selecionando a div pelo metodo getElementById('area')
+            //var area = document.getElementById('area') //selecionando a div pelo metodo getElementById('area')
             area.innerText = 'Mouse na area' //texto mostrado após entrar na div com o mouse
         }
 
         function sair(){ //função chamada quando o mouse sai da area da div (onmouseout)
-            var area = document.querySelector('div#area') //selecionando a div pelo metodo querySelector('div#area')
+            //var area = document.querySelector('div#area') //selecionando a div pelo metodo querySelector('div#area')
             area.innerHTML = 'Mouse partiu' //texto mostrado após sair da div com o mouse
             area.style.background = 'rgb(55, 95, 14)' //cor do background após sair da div com o mouse
         }
